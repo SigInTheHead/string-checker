@@ -6,7 +6,7 @@ Example usage is to test for `console.log()`. By default it will warn, bu this c
 flag.
 
 This is very much in beta at the minute, with no unit testing. If you use, please test before relying on it in your
-build chain 
+build chain.
 
 # Installation
 install through npm
@@ -25,8 +25,9 @@ Options:
 | Long | Short | Description | Type | Default | Required |
 |------|-------|-------------|------|---------|----------|
 | --version | | Show version number| | |  |
-|--dir| -d | Specifies the root directory for file search | [string] | | Y
-|--searchString | -s | Text to search for | [array] [String] | |Y|
-|--exclusions| -x | Files that are excluded from the search | [array] [String] | | N |
-|--error | -e | returns an error rather than a warning | [boolean] | false | N |
-|--help | -h | Show help | | | |
+| --dir| -d | Specifies the root directory for file search | [string] | | Y
+| --searchString | -s | Text to search for | [array] [String] | |Y|
+| --exclusions| -x | Files that are excluded from the search | [array] [String] | | N |
+| --error | -e | returns an error rather than a warning | [boolean] | false | N |
+| --console | -c | output results to console | [boolean] | true | N |
+| --help | -h | Show help | | | |
