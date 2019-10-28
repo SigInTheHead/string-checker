@@ -1,21 +1,21 @@
 {
   "name": "string-checker",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Build tool that checks for specified strings in files",
-  "main": "bin/string-checker.js",
-  "types": "bin/string-checker.d.ts",
+  "main": "bin/index.js",
   "scripts": {
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "prebuild": "npm run lint",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test:basic": "node . -d ./src -s console.log -x src/results-output.ts"
   },
   "files": [
     "bin/**/*"
   ],
   "bin": {
-    "string-checker": "bin/string-checker.js"
+    "string-checker": "bin/index.js"
   },
   "repository": {
     "type": "git",
