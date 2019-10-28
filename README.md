@@ -1,20 +1,32 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
+This is a node application designed to be integrated in a build chain to check fer certain strings that you don't want
+in your release / commit.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Example usage is to test for `console.log()`. By default it will warn, bu this can be changed to error using the `-e`
+flag.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+This is very much in beta at the minute, with no unit testing. If you use, please test before relying on it in your
+build chain 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Installation
+install through npm
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+`npm install string-checker --save-dev`
+
+#### Update package.json
+
+Add an entry to the `scripts` section of `package.json`
+
+`"check:console": "string-ckeck -d ./src -s console.log -e"`
+
+# Options
+Options:
+
+| Long | Short | Description | Type | Default | Required |
+|------|-------|-------------|------|---------|----------|
+| --version | | Show version number| | |  |
+|--dir| -d | Specifies the root directory for file search | [string] | | Y
+|--searchString | -s | Text to search for | [array] [String] | |Y|
+|--exclusions| -x | Files that are excluded from the search | [array] [String] | | N |
+|--error | -e | returns an error rather than a warning | [boolean] | false | N |
+|--help | -h | Show help | | | |
