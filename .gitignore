@@ -1,0 +1,9 @@
+# IDE Swettings
+/.idea
+
+# Packages
+/node_modules
+
+# Builds
+/lib
+/bin
