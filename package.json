@@ -1,0 +1,37 @@
+{
+  "name": "string-checker",
+  "version": "0.1.0",
+  "description": "Build tool that checks for specified strings in files",
+  "main": "bin/string-checker.js",
+  "types": "bin/string-checker.d.ts",
+  "scripts": {
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "bin/**/*"
+  ],
+  "bin": {
+    "string-checker": "bin/string-checker.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SigInTheHead/string-checker"
+  },
+  "author": "Tim O'Dell",
+  "license": "ISC",
+  "dependencies": {
+    "find-in-file": "^1.0.1",
+    "find-in-files": "^0.5.0",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/yargs": "^13.0.3",
+    "tslint": "^5.20.0",
+    "typescript": "^3.7.0-dev.20191016"
+  }
+}
