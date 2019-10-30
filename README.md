@@ -1,4 +1,8 @@
 # Introduction
+[![NPM version](https://img.shields.io/npm/v/string-checker.svg?style=for-the-badge)](https://www.npmjs.com/package/string-checker)
+[![Downloads](https://img.shields.io/npm/dm/string-checker.svg?style=for-the-badge)](https://www.npmjs.com/package/string-checker)
+[![Licence](https://img.shields.io/npm/l/string-checker.svg?style=for-the-badge)](https://www.npmjs.com/package/string-checker)
+
 This is a node application designed to be integrated in a build chain to check fer certain strings that you don't want
 in your release / commit.
 
