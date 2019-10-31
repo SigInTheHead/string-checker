@@ -1,6 +1,6 @@
 {
   "name": "string-checker",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Build tool that checks for specified strings in files",
   "main": "bin/index.js",
   "scripts": {
@@ -23,15 +23,21 @@
   },
   "author": "Tim O'Dell",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "find-in-file": "^1.0.1",
     "find-in-files": "^0.5.0",
     "yargs": "^14.2.0"
   },
   "devDependencies": {
-    "@types/node": "^12.11.7",
     "@types/yargs": "^13.0.3",
-    "tslint": "^5.20.0",
-    "typescript": "^3.7.0-dev.20191016"
-  }
+    "@types/node": "^12.12.3",
+    "typescript": "^3.7.0-dev.20191016",
+    "tmo-tslint-settings": "^1.0.0",
+    "tslint": "^5.20.0"
+  },
+  "keywords": [
+    "build",
+    "release",
+    "tooling"
+  ]
 }
